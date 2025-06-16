@@ -1,0 +1,10 @@
+Django==4.2
+django-cors-headers
+django-environ
+django-filter
+django-jazzmin
+djangorestframework
+drf-yasg
+pillow
+psycopg2-binary
+requests
