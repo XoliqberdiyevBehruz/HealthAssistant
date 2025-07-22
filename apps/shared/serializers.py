@@ -9,3 +9,19 @@ class RegionListSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'name'
         ]
+
+    
+class ConsulationCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Consulation
+        fields = [
+            'full_name', 'phone'
+        ]
+
+
+class ConsulationListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Consulation
+        fields = [
+            'id', 'full_name', 'phone', 'is_contacted', 'created_at',
+        ]
