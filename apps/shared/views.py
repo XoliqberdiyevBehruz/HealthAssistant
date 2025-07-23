@@ -13,6 +13,6 @@ class ConsulationCreateApiView(generics.CreateAPIView):
     serializer_class = serializers.ConsulationCreateSerializer
 
 
-class ConsulationCreateApiView(generics.ListAPIView):
+class ConsulationListApiView(generics.ListAPIView):
     queryset = models.Consulation.objects.order_by('created_at')
     serializer_class = serializers.ConsulationListSerializer
