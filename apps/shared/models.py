@@ -21,6 +21,7 @@ class Region(BaseModel):
 class Consulation(BaseModel):
     full_name = models.CharField(max_length=250)
     phone = models.CharField(max_length=13)
+    doctor = models.ForeignKey('doctors.Doctor', on_delete=models.CASCADE, related_name='doctors', null=True)
     is_contacted = models.BooleanField(default=False)
 
     def __str__(self):

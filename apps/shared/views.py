@@ -14,5 +14,5 @@ class ConsulationCreateApiView(generics.CreateAPIView):
 
 
 class ConsulationListApiView(generics.ListAPIView):
-    queryset = models.Consulation.objects.order_by('created_at')
+    queryset = models.Consulation.objects.order_by('created_at').select_related('doctor')
     serializer_class = serializers.ConsulationListSerializer
